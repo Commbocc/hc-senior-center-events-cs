@@ -39,7 +39,7 @@
               :title="`${fields.name} Web Page`"
               :aria-label="`${fields.name} Web Page`"
               target="_top"
-              :href="fields.url"
+              :href="fields.newUrl"
             >
               View Location's Web Page</a
             >
