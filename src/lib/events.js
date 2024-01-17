@@ -7,12 +7,12 @@ export const events = reactive({
   data: [],
 })
 
-export async function fetchEvents(sitecoreItemId) {
+export async function fetchEvents(UID) {
   events.loading = true
   try {
     const { data } = await airtable.get(`/events`, {
       params: {
-        filterByFormula: `AND({Published}, FIND('${sitecoreItemId}', ARRAYJOIN({LocationGUID})))`,
+        filterByFormula: `AND({Published}, FIND('${UID}', ARRAYJOIN({LocationUID})))`,
         view: import.meta.env.DEV ? 'DevView' : 'AppView',
       },
     })

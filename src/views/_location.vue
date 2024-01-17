@@ -91,12 +91,12 @@ const dateFormat = (dateStr) => {
 
 export default {
   props: {
-    sitecoreItemId: String,
+    UID: String,
   },
 
   setup(props) {
-    fetchLocation(props.sitecoreItemId)
-    fetchEvents(props.sitecoreItemId)
+    fetchLocation(props.UID)
+    fetchEvents(props.UID)
 
     return { location, events, dateFormat }
   },

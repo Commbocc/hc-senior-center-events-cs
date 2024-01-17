@@ -26,7 +26,7 @@
               target="_self"
               :to="{
                 name: 'Location',
-                params: { sitecoreItemId: fields.GUID },
+                params: { UID: fields.UID },
                 query: { index: 1 },
               }"
               class=""

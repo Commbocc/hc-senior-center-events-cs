@@ -30,12 +30,12 @@ export const location = reactive({
   data: null,
 })
 
-export async function fetchLocation(sitecoreItemId) {
+export async function fetchLocation(LocationUID) {
   location.loading = true
   try {
     const { data } = await airtable.get(`/locations`, {
       params: {
-        filterByFormula: `'${sitecoreItemId}' = {GUID}`,
+        filterByFormula: `ARRAYJOIN({LocationUID}) = '${UID}'`,
         view: import.meta.env.DEV ? 'DevView' : 'AppView',
       },
     })
