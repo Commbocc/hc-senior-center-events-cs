@@ -43,10 +43,10 @@
           <dd class="col-sm-8 col-lg-9">
             <mark>
               <span v-if="fields.DayNames && fields.Spanish">
-                {{ fields.DayNamesSpanish.join(', ') }}
+                {{ fields.DayNamesSpanish?.join(', ') }}
               </span>
               <span v-else-if="fields.DayNames">
-                {{ fields.DayNames.join(', ') }}
+                {{ fields.DayNames?.join(', ') }}
               </span>
 
               <span v-if="fields.Date">
@@ -55,9 +55,9 @@
 
               <br />
 
-              <span>{{ fields.StartTimeName.join(' ') }}</span>
+              <span>{{ fields.StartTimeName?.join(' ') }}</span>
               <span v-if="fields.EndTimeName">
-                - {{ fields.EndTimeName.join(' ') }}
+                - {{ fields.EndTimeName?.join(' ') }}
               </span>
             </mark>
           </dd>
